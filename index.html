@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>IBM SPSS on Github</title>
+    <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+    <!-- Bootstrap 3.3.2 -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+
+    
+    <link rel="stylesheet" href="font-mfizz-1.2/font-mfizz.css">
+    <!-- Font Awesome Icons -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <!-- Ionicons -->
+    <link href="http://code.ionicframework.com/ionicons/2.0.0/css/ionicons.min.css" rel="stylesheet" type="text/css" />
+    <!-- Theme style -->
+    <link href="dist/css/AdminLTE.min.css" rel="stylesheet" type="text/css" />
+
+     <link href="dist/css/style.css" rel="stylesheet" type="text/css" />
+          <link href="dist/css/common.css" rel="stylesheet" type="text/css" />
+
+    <!-- AdminLTE Skins. Choose a skin from the css/skins
+         folder instead of downloading all of them to reduce the load. -->
+    <link href="dist/css/skins/_all-skins.min.css" rel="stylesheet" type="text/css" />
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+    <style>
+ @font-face { font-family: Lubalin; src: url('Lubalin.ttf'); } 
+    
+h4 {
+font-family: Lubalin;
+font-size: 36px;
+}</style>
+  </head>
+  <body class="skin-blue">
+    <div class="wrapper">
+
+
+ <header class="main-header" >
+
+
+
+      <div class="pn-dw-master cf" role="banner"> 
+  
+  <div class="fl">
+    <a href="http://www.ibm.com/developerworks/" class="pn-dw-fed-logo"><span class="pn-dw-ibm">IBM</span> developerWorks</a>
+    /
+    <a class="pn-dw-fed-logo" href="/centers/">Developer Centers</a>
+  </div>
+  
+  
+  <div class="fr">
+
+  
+    <span id="pnext-dw-tab" class="pn-dw-tab"><a href="http://www.ibm.com/developerworks/" rel="external"><img alt="dW" src="https://developer.ibm.com/predictiveanalytics/wp-content/themes/projectnext/css/dw-tab.png"></a></span>
+  </div>
+
+</div>
+
+
+<div id="pnext-top-menu" class="pn-top-menu links-top-menu" role="navigation" aria-label="Main navigation">
+  <div class="flag">
+    <span class="link-home flag-img">
+      <a rel="home" class="pn-nav-home" href="https://developer.ibm.com/predictiveanalytics"><img class="pn-logo-image" src="https://github.com/aruizga7/aruizga7.github.io/blob/master/Logo.png?raw=true" alt="SPSS Predictive Analytics"></a>
+    </span>
+
+    
+      <div class="pn-top-menu-container flag-bd flag-expand"><ul id="menu-main" class="menu"><li id="menu-item-32" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-32"><a href="https://developer.ibm.com/predictiveanalytics/blog/">Blog</a></li>
+<li id="menu-item-34" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-34"><a href="https://developer.ibm.com/predictiveanalytics/docs/home-2/">Docs</a></li>
+<li id="menu-item-43" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-43"><a href="https://developer.ibm.com/predictiveanalytics/downloads/">Downloads</a></li>
+<li id="menu-item-250" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-250"><a href="https://developer.ibm.com/predictiveanalytics/videos/">Videos</a></li>
+<li id="menu-item-46" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-46"><a href="https://developer.ibm.com/predictiveanalytics/get-help/">Get Help</a></li>
+<li id="menu-item-33" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-33"><a href="https://developer.ibm.com/predictiveanalytics/events-2/">Events</a></li>
+</ul></div>
+    
+    <div class="flag-bd">
+      
+  
+    
+<div class="pn-search">   
+
+
+
+
+    <form role="search" class="pn-search-form" method="get" id="searchbox_002602540803703215521:pmoyvjwf4xi" action="https://developer.ibm.com/predictiveanalytics/search/">
+      <input value="
+more:more:next" name="hq" type="hidden">
+      <label for="pnext-search-input" class="visuallyhidden">Search</label>
+      <input placeholder="Search" required="" aria-required="true" id="pnext-search-input" class="pn-search-input pn-nav-search-input fl" name="visual_q" size="40" type="search">
+      <input id="pnext-search-input-hidden" name="q" type="hidden">
+      
+    </form>
+    
+    </div>
+  
+  
+    </div>  
+
+  </div>
+</div>
+ 
+
+
+
+
+
+      
+      </header>
+
+
+
+
+
+      <!-- Left side column. contains the logo and sidebar -->
+      <aside class="main-sidebar" style="height: auto;padding-top: 80px;">
+        <!-- sidebar: style can be found in sidebar.less -->
+        <section class="sidebar">
+          <!-- Sidebar user panel -->
+        
+          <!-- search form -->
+          <form action="#" method="get" class="sidebar-form">
+            <div class="input-group">
+              <input type="text" name="q" class="form-control" placeholder="Search..."/>
+              <span class="input-group-btn">
+                <button type='submit' name='seach' id='search-btn' class="btn btn-flat"><i class="fa fa-search"></i></button>
+              </span>
+            </div>
+          </form>
+          <!-- /.search form -->
+          <!-- sidebar menu: : style can be found in sidebar.less -->
+          <ul class="sidebar-menu">
+            <li class="treeview">
+              <a href="#">
+                <i class="fa fa-home"></i> <span>Home</span> 
+              </a>
+             
+            </li>
+                        <li><a href="#"><i class="fa fa-book"></i> </i>Contribute</a></li>
+            <li class="header">Refine by</li>
+            <li class="active">
+              <a href="#">
+                <i class="fa fa-dashboard"></i> <span>Software</span> <i class="fa fa-angle-left pull-right"></i>
+              </a>
+              <ul class="treeview-menu">
+                <li><a href="../index.html"><i class="fa fa-diamond"></i>SPSS Modeler<i class="pull-right"> <input type="checkbox" aria-label="..."></i></a></li>
+                <li><a href="../index2.html"><i class="fa fa-table"></i>SPSS Statistics<i class="pull-right"> <input type="checkbox" aria-label="..."></i></a></li>
+              </ul>
+            </li>
+             <li class="active">
+              <a href="#">
+                <i class="fa fa-cubes"></i> <span>Type</span> <i class="fa fa-angle-left pull-right"></i>
+              </a>
+              <ul class="treeview-menu">
+                <li><a href="../index.html"><i class="fa fa-rocket"></i>Sample<i class="pull-right"> <input type="checkbox" aria-label="..."></i></a></li>
+                <li><a href="../index2.html"><i class="fa fa-plus-square-o"></i>Extension<i class="pull-right"> <input type="checkbox" aria-label="..."></i></a></li>
+              </ul>
+            </li>
+            <li class="active">
+              <a href="#">
+                <i class="fa fa-files-o"></i>
+                <span>Category</span>
+                 <i class="fa fa-angle-left pull-right"></i>
+              </a>
+              <ul class="treeview-menu">
+             
+                <li><a href="layout/top-nav.html"><i class="fa fa-database"></i>Data Sources
+                <i class="pull-right"> <input type="checkbox" aria-label="..."></i></a></li>
+                <li><a href="layout/boxed.html"><i class="fa fa-circle-o"></i>Data Preparation
+                <i class="pull-right"> <input type="checkbox" aria-label="..."></i></a></li>
+                <li><a href="layout/fixed.html"><i class="fa fa-diamond"></i>Models
+                <i class="pull-right"> <input type="checkbox" aria-label="..."></i></a></li>
+                 <li><a href="layout/fixed.html"><i class="fa fa-cloud"></i>Watson
+                <i class="pull-right"> <input type="checkbox" aria-label="..."></i></a></li>
+                <li><a href="layout/collapsed-sidebar.html"><i class="fa fa-globe"></i> Geospatial
+
+<i class="pull-right"> <input type="checkbox" aria-label="..."></i>
+
+                </a>
+
+                </li>
+                  <li><a href="layout/collapsed-sidebar.html"><i class="fa fa-users"></i> Social Media <i class="pull-right"> <input type="checkbox" aria-label="..."></i></a></li>
+                  <li><a href="layout/collapsed-sidebar.html"><i class="fa fa-bar-chart"></i> Visualization
+                  <i class="pull-right"> <input type="checkbox" aria-label="..."></i></a></li>
+              </ul>
+            </li>
+
+<li class="active">
+              <a href="#">
+                <i class="fa fa-code"></i> <span>Developed by</span> <i class="fa fa-angle-left pull-right"></i>
+              </a>
+              <ul class="treeview-menu">
+                 <li><a href="../index2.html"><i class="fa fa-star"></i>IBM<i class="pull-right"> <input type="checkbox" aria-label="..."></i></a></li>
+                <li><a href="../index.html"><i class="fa fa-circle"></i>Business Partner<i class="pull-right"> <input type="checkbox" aria-label="..."></i></a></li>
+                <li><a href="../index2.html"><i class="fa fa-user-plus"></i> &nbsp;Community<i class="pull-right"> <input type="checkbox" aria-label="..."></i></a></li>
+
+              </ul>
+            </li>
+            
+              <li class="active">
+              <a href="#">
+                <i class="fa fa-code"></i> <span>Language</span> <i class="fa fa-angle-left pull-right"></i>
+              </a>
+              <ul class="treeview-menu">
+                 <li><a href="../index2.html"><i class="fa fa-table"></i>SPSS<i class="pull-right"> <input type="checkbox" aria-label="..."></i></a></li>
+                <li><a href="../index.html"><i class="fa fa-superscript"></i>R<i class="pull-right"> <input type="checkbox" aria-label="..."></i></a></li>
+                <li><a href="../index2.html"><i class="icon-python"></i> &nbsp;Python<i class="pull-right"> <input type="checkbox" aria-label="..."></i></a></li>
+                 <li><a href="../index2.html"><i class="icon-java"></i>&nbsp;Java<i class="pull-right"> <input type="checkbox" aria-label="..."></i></a></li>
+              </ul>
+            </li>
+          
+
+            
+          </ul>
+        </section>
+        <!-- /.sidebar -->
+      </aside>
+
+      <!-- Content Wrapper. Contains page content -->
+      <div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+
+
+        <!-- Main content -->
+        <section class="content">
+
+                            
+
+          <!-- =========================================================== -->
+
+
+          <!-- =========================================================== -->
+
+          <!-- Small boxes (Stat box) -->
+          <div class="row">
+
+            <div class="col-lg-12 col-xs-12">
+              <!-- small box -->
+              
+                <div class="inner">
+                  <center>
+                 <h1 style="font-size: 28px;" > IBM Predictive Analytics Gallery</h1>
+
+                  </center>
+                </div>
+                
+
+             
+            </div><!-- ./col -->
+
+          </div><!-- /.row -->
+
+          <!-- =========================================================== -->
+        <!-- Content Header (Page header) -->
+          <section class="content-header">
+          <h1>
+            <BR>
+          </h1>
+          <ol class="breadcrumb">
+          <div class="dropdown"> 
+
+            <button class="btn btn-default " type="button"  aria-expanded="true">
+              <i class="fa fa-list"></i>
+             
+             </button>
+
+              <button class="btn btn-default active" type="button"  aria-expanded="true">
+              <i class="fa fa-th-large"></i>
+             </button>
+
+
+            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+              Sort By
+              <span class="caret"></span>
+             </button>
+
+
+             <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Date</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Views</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Downloads</a></li>
+
+            </ul>
+
+
+          </div>
+            <BR>
+          </ol>
+
+
+
+
+
+
+
+
+
+        </section>
+          <BR>
+
+          <div class="row">
+        <div class="col-md-3">
+              <div class="box box-default">
+                <div class="box-header with-border">
+                  <div ><i class="fa fa-table"></i>&nbsp;SPSS Statistics <div class="box-tools pull-right">
+                     
+                    <span data-toggle="tooltip"  class='badge bg-light-blue'>IBM</span>
+
+                  </div><!-- /.box-tools --></div>
+
+                </div><!-- /.box-header -->
+                <div class="box-header with-border">
+                  <h3 class="box-title">Random Forest</h3>
+                  <div class="box-tools pull-right">
+                  </div><!-- /.box-tools -->
+                </div><!-- /.box-header -->
+                <div class="box-body">
+                <center>
+                <img src="http://cdn-ak.f.st-hatena.com/images/fotolife/k/kazoo04/20131204/20131204173330.png" alt="Smiley face"  width="100%"><BR>
+                </center>
+                  Classification and regression based on a forest of trees using random inputs, utilizing conditional inference trees as base learners.<BR>
+
+                                    <div class="box-tools pull-left">
+                    <span data-toggle="tooltip"  class='badge bg-yellow'>Python</span>
+                    <span data-toggle="tooltip"  class='badge bg-light'>Model</span>
+                    </div>
+
+                    <div class="box-tools pull-right">
+                    <span data-toggle="tooltip"  class='fa fa-eye'></span>125
+                    <span data-toggle="tooltip"  class='fa fa-download'></span>29
+                    
+               
+
+                  </div><!-- /.box-tools -->
+                
+                </div><!-- /.box-body -->
+               
+                <center>     <BR><a href="#" class="small-box-footer">
+                  More info <i class="fa fa-arrow-circle-right"></i>   </a></center>
+              
+              </div><!-- /.box -->
+            </div><!-- /.col -->
+             <div class="col-md-3">
+              <div class="box box-default">
+               <div class="box-header with-border">
+                  <div ><i class="fa fa-diamond"></i>&nbsp;SPSS Modeler</div>
+                  <div class="box-tools pull-right">
+                    
+                    <span data-toggle="tooltip"  class='badge bg-light-blue'>IBM</span>
+
+                  </div><!-- /.box-tools -->
+                </div><!-- /.box-header -->
+                <div class="box-header with-border">
+                  <h3 class="box-title">Plot Geospatial Data</h3>
+                  <div class="box-tools pull-right">
+                  </div><!-- /.box-tools -->
+                </div><!-- /.box-header -->
+                <div class="box-body">
+                <center>
+                <img src="Thumbnails/plotgeospatialdata.png" alt="Smiley face"  width="100%"><BR>
+                </center>
+                  Classification and regression based on a forest of trees using random inputs, utilizing conditional inference trees as base learners.<BR>
+                      <div class="box-tools pull-left">
+                    <span data-toggle="tooltip"  class='badge bg-yellow'>R</span>
+                    <span data-toggle="tooltip"  class='badge bg-light'>Geospatial</span>
+                    </div>
+
+                    <div class="box-tools pull-right">
+                    <span data-toggle="tooltip"  class='fa fa-eye'></span>125
+                    <span data-toggle="tooltip"  class='fa fa-download'></span>29
+                    
+               
+
+                  </div><!-- /.box-tools -->
+                
+                </div><!-- /.box-body -->
+                <center><BR><a href="#" class="small-box-footer">
+                  More info <i class="fa fa-arrow-circle-right"></i>   </a></center>
+              
+              </div><!-- /.box -->
+            </div><!-- /.col -->
+             <div class="col-md-3">
+              <div class="box box-default">
+               <div class="box-header with-border">
+                  <div ><i class="fa fa-diamond"></i>&nbsp;SPSS Modeler</div>
+                  <div class="box-tools pull-right">
+                    
+                    <span data-toggle="tooltip"  class='badge bg-orange'>Community</span>
+
+                  </div><!-- /.box-tools -->
+                </div><!-- /.box-header -->
+                <div class="box-header with-border">
+                  <h3 class="box-title">Multicolor Plot</h3>
+                  <div class="box-tools pull-right">
+                  </div><!-- /.box-tools -->
+                </div><!-- /.box-header -->
+                <div class="box-body">
+                <center>
+                <img src="Thumbnails/multicolorplot.png" alt="Smiley face"  width="100%"><BR>
+                </center>
+                  Classification and regression based on a forest of trees using random inputs, utilizing conditional inference trees as base learners.<BR>
+                      <div class="box-tools pull-left">
+                    <span data-toggle="tooltip"  class='badge bg-yellow'>R</span>
+                    <span data-toggle="tooltip"  class='badge bg-light'>Visualization</span>
+                    </div>
+
+                    <div class="box-tools pull-right">
+                    <span data-toggle="tooltip"  class='fa fa-eye'></span>125 
+                    <span data-toggle="tooltip"  class='fa fa-download'></span>29
+
+                    
+               
+
+                  </div><!-- /.box-tools -->
+                
+                </div><!-- /.box-body -->
+                <center><BR><a href="#" class="small-box-footer">
+                  More info <i class="fa fa-arrow-circle-right"></i>   </a></center>
+              
+              </div><!-- /.box -->
+            </div><!-- /.col -->
+            <div class="col-md-3">
+              <div class="box box-default">
+               <div class="box-header with-border">
+                  <div ><i class="fa fa-diamond"></i>&nbsp;SPSS Modeler</div>
+                  <div class="box-tools pull-right">
+                    
+                    <span data-toggle="tooltip"  class='badge bg-green'>Partner</span>
+
+                  </div><!-- /.box-tools -->
+                </div><!-- /.box-header -->
+                <div class="box-header with-border">
+                  <h3 class="box-title">Push to ArcGIS</h3>
+                  <div class="box-tools pull-right">
+                  </div><!-- /.box-tools -->
+                </div><!-- /.box-header -->
+                <div class="box-body">
+                <center>
+                <img src="Thumbnails/pushtoarcgis.png" alt="Smiley face"  width="100%"><BR>
+                </center>
+                  Classification and regression based on a forest of trees using random inputs, utilizing conditional inference trees as base learners.<BR>
+                      <div class="box-tools pull-left">
+                    <span data-toggle="tooltip"  class='badge bg-yellow'>R</span>
+                    <span data-toggle="tooltip"  class='badge bg-light'>Geospatial</span>
+                    </div>
+
+<div class="box-tools pull-right">
+                    <span data-toggle="tooltip"  class='fa fa-eye'></span>125 
+                    <span data-toggle="tooltip"  class='fa fa-download'></span>29
+
+                    
+               
+
+                  </div><!-- /.box-tools -->
+
+                </div><!-- /.box-body -->
+                
+                <center><BR><a href="#" class="small-box-footer">
+                  More info <i class="fa fa-arrow-circle-right"></i>   </a></center>
+              
+              </div><!-- /.box -->
+            </div><!-- /.col -->
+          </div><!-- /.row -->
+ <!-- =========================================================== -->
+ <div class="row">
+        <div class="col-md-3">
+              <div class="box box-default">
+                <div class="box-header with-border">
+                  <div ><i class="fa fa-table"></i>&nbsp;SPSS Statistics <div class="box-tools pull-right">
+                     
+                    <span data-toggle="tooltip"  class='badge bg-light-blue'>IBM</span>
+
+                  </div><!-- /.box-tools --></div>
+
+                </div><!-- /.box-header -->
+                <div class="box-header with-border">
+                  <h3 class="box-title">Random Forest</h3>
+                  <div class="box-tools pull-right">
+                  </div><!-- /.box-tools -->
+                </div><!-- /.box-header -->
+                <div class="box-body">
+                <center>
+                <img src="http://cdn-ak.f.st-hatena.com/images/fotolife/k/kazoo04/20131204/20131204173330.png" alt="Smiley face"  width="70%"><BR>
+                </center>
+                  Classification and regression based on a forest of trees using random inputs, utilizing conditional inference trees as base learners.<BR>
+
+                                    <div class="box-tools pull-left">
+                    <span data-toggle="tooltip"  class='badge bg-yellow'>python</span>
+                    <span data-toggle="tooltip"  class='badge bg-light'>Model</span>
+                    </div>
+
+                    <div class="box-tools pull-right">
+                    <span data-toggle="tooltip"  class='fa fa-eye'></span>125
+                    <span data-toggle="tooltip"  class='fa fa-download'></span>29
+                    
+               
+
+                  </div><!-- /.box-tools -->
+                
+                </div><!-- /.box-body -->
+               
+                <center>     <BR><a href="#" class="small-box-footer">
+                  More info <i class="fa fa-arrow-circle-right"></i>   </a></center>
+              
+              </div><!-- /.box -->
+            </div><!-- /.col -->
+             <div class="col-md-3">
+              <div class="box box-default">
+               <div class="box-header with-border">
+                  <div ><i class="fa fa-diamond"></i>&nbsp;SPSS Modeler</div>
+                  <div class="box-tools pull-right">
+                    
+                    <span data-toggle="tooltip"  class='badge bg-light-blue'>IBM</span>
+
+                  </div><!-- /.box-tools -->
+                </div><!-- /.box-header -->
+                <div class="box-header with-border">
+                  <h3 class="box-title">Random Forest</h3>
+                  <div class="box-tools pull-right">
+                  </div><!-- /.box-tools -->
+                </div><!-- /.box-header -->
+                <div class="box-body">
+                <center>
+                <img src="http://cdn-ak.f.st-hatena.com/images/fotolife/k/kazoo04/20131204/20131204173330.png" alt="Smiley face"  width="70%"><BR>
+                </center>
+                  Classification and regression based on a forest of trees using random inputs, utilizing conditional inference trees as base learners.<BR>
+                      <div class="box-tools pull-left">
+                    <span data-toggle="tooltip"  class='badge bg-yellow'>python</span>
+                    <span data-toggle="tooltip"  class='badge bg-light'>Model</span>
+                    </div>
+
+                    <div class="box-tools pull-right">
+                    <span data-toggle="tooltip"  class='fa fa-eye'></span>125
+                    <span data-toggle="tooltip"  class='fa fa-download'></span>29
+                    
+               
+
+                  </div><!-- /.box-tools -->
+                
+                </div><!-- /.box-body -->
+                <center><BR><a href="#" class="small-box-footer">
+                  More info <i class="fa fa-arrow-circle-right"></i>   </a></center>
+              
+              </div><!-- /.box -->
+            </div><!-- /.col -->
+             <div class="col-md-3">
+              <div class="box box-default">
+               <div class="box-header with-border">
+                  <div ><i class="fa fa-diamond"></i>&nbsp;SPSS Modeler</div>
+                  <div class="box-tools pull-right">
+                    
+                    <span data-toggle="tooltip"  class='badge bg-orange'>Community</span>
+
+                  </div><!-- /.box-tools -->
+                </div><!-- /.box-header -->
+                <div class="box-header with-border">
+                  <h3 class="box-title">Random Forest</h3>
+                  <div class="box-tools pull-right">
+                  </div><!-- /.box-tools -->
+                </div><!-- /.box-header -->
+                <div class="box-body">
+                <center>
+                <img src="http://cdn-ak.f.st-hatena.com/images/fotolife/k/kazoo04/20131204/20131204173330.png" alt="Smiley face"  width="70%"><BR>
+                </center>
+                  Classification and regression based on a forest of trees using random inputs, utilizing conditional inference trees as base learners.<BR>
+                      <div class="box-tools pull-left">
+                    <span data-toggle="tooltip"  class='badge bg-yellow'>python</span>
+                    <span data-toggle="tooltip"  class='badge bg-light'>Model</span>
+                    </div>
+
+                    <div class="box-tools pull-right">
+                    <span data-toggle="tooltip"  class='fa fa-eye'></span>125 
+                    <span data-toggle="tooltip"  class='fa fa-download'></span>29
+
+                    
+               
+
+                  </div><!-- /.box-tools -->
+                
+                </div><!-- /.box-body -->
+                <center><BR><a href="#" class="small-box-footer">
+                  More info <i class="fa fa-arrow-circle-right"></i>   </a></center>
+              
+              </div><!-- /.box -->
+            </div><!-- /.col -->
+            <div class="col-md-3">
+              <div class="box box-default">
+               <div class="box-header with-border">
+                  <div ><i class="fa fa-diamond"></i>&nbsp;SPSS Modeler</div>
+                  <div class="box-tools pull-right">
+                    
+                    <span data-toggle="tooltip"  class='badge bg-green'>Partner</span>
+
+                  </div><!-- /.box-tools -->
+                </div><!-- /.box-header -->
+                <div class="box-header with-border">
+                  <h3 class="box-title">Random Forest</h3>
+                  <div class="box-tools pull-right">
+                  </div><!-- /.box-tools -->
+                </div><!-- /.box-header -->
+                <div class="box-body">
+                <center>
+                <img src="http://cdn-ak.f.st-hatena.com/images/fotolife/k/kazoo04/20131204/20131204173330.png" alt="Smiley face"  width="70%"><BR>
+                </center>
+                  Classification and regression based on a forest of trees using random inputs, utilizing conditional inference trees as base learners.<BR>
+                      <div class="box-tools pull-left">
+                    <span data-toggle="tooltip"  class='badge bg-yellow'>python</span>
+                    <span data-toggle="tooltip"  class='badge bg-light'>Model</span>
+                    </div>
+
+<div class="box-tools pull-right">
+                    <span data-toggle="tooltip"  class='fa fa-eye'></span>125 
+                    <span data-toggle="tooltip"  class='fa fa-download'></span>29
+
+                    
+               
+
+                  </div><!-- /.box-tools -->
+
+                </div><!-- /.box-body -->
+                
+                <center><BR><a href="#" class="small-box-footer">
+                  More info <i class="fa fa-arrow-circle-right"></i>   </a></center>
+              
+              </div><!-- /.box -->
+            </div><!-- /.col -->
+          </div><!-- /.row -->
+          <!-- =========================================================== -->
+ <div class="row">
+        <div class="col-md-3">
+              <div class="box box-default">
+                <div class="box-header with-border">
+                  <div ><i class="fa fa-table"></i>&nbsp;SPSS Statistics <div class="box-tools pull-right">
+                     
+                    <span data-toggle="tooltip"  class='badge bg-light-blue'>IBM</span>
+
+                  </div><!-- /.box-tools --></div>
+
+                </div><!-- /.box-header -->
+                <div class="box-header with-border">
+                  <h3 class="box-title">Random Forest</h3>
+                  <div class="box-tools pull-right">
+                  </div><!-- /.box-tools -->
+                </div><!-- /.box-header -->
+                <div class="box-body">
+                <center>
+                <img src="http://cdn-ak.f.st-hatena.com/images/fotolife/k/kazoo04/20131204/20131204173330.png" alt="Smiley face"  width="70%"><BR>
+                </center>
+                  Classification and regression based on a forest of trees using random inputs, utilizing conditional inference trees as base learners.<BR>
+
+                                    <div class="box-tools pull-left">
+                    <span data-toggle="tooltip"  class='badge bg-yellow'>python</span>
+                    <span data-toggle="tooltip"  class='badge bg-light'>Model</span>
+                    </div>
+
+                    <div class="box-tools pull-right">
+                    <span data-toggle="tooltip"  class='fa fa-eye'></span>125
+                    <span data-toggle="tooltip"  class='fa fa-download'></span>29
+                    
+               
+
+                  </div><!-- /.box-tools -->
+                
+                </div><!-- /.box-body -->
+               
+                <center>     <BR><a href="#" class="small-box-footer">
+                  More info <i class="fa fa-arrow-circle-right"></i>   </a></center>
+              
+              </div><!-- /.box -->
+            </div><!-- /.col -->
+             <div class="col-md-3">
+              <div class="box box-default">
+               <div class="box-header with-border">
+                  <div ><i class="fa fa-diamond"></i>&nbsp;SPSS Modeler</div>
+                  <div class="box-tools pull-right">
+                    
+                    <span data-toggle="tooltip"  class='badge bg-light-blue'>IBM</span>
+
+                  </div><!-- /.box-tools -->
+                </div><!-- /.box-header -->
+                <div class="box-header with-border">
+                  <h3 class="box-title">Random Forest</h3>
+                  <div class="box-tools pull-right">
+                  </div><!-- /.box-tools -->
+                </div><!-- /.box-header -->
+                <div class="box-body">
+                <center>
+                <img src="http://cdn-ak.f.st-hatena.com/images/fotolife/k/kazoo04/20131204/20131204173330.png" alt="Smiley face"  width="70%"><BR>
+                </center>
+                  Classification and regression based on a forest of trees using random inputs, utilizing conditional inference trees as base learners.<BR>
+                      <div class="box-tools pull-left">
+                    <span data-toggle="tooltip"  class='badge bg-yellow'>python</span>
+                    <span data-toggle="tooltip"  class='badge bg-light'>Model</span>
+                    </div>
+
+                    <div class="box-tools pull-right">
+                    <span data-toggle="tooltip"  class='fa fa-eye'></span>125
+                    <span data-toggle="tooltip"  class='fa fa-download'></span>29
+                    
+               
+
+                  </div><!-- /.box-tools -->
+                
+                </div><!-- /.box-body -->
+                <center><BR><a href="#" class="small-box-footer">
+                  More info <i class="fa fa-arrow-circle-right"></i>   </a></center>
+              
+              </div><!-- /.box -->
+            </div><!-- /.col -->
+             <div class="col-md-3">
+              <div class="box box-default">
+               <div class="box-header with-border">
+                  <div ><i class="fa fa-diamond"></i>&nbsp;SPSS Modeler</div>
+                  <div class="box-tools pull-right">
+                    
+                    <span data-toggle="tooltip"  class='badge bg-orange'>Community</span>
+
+                  </div><!-- /.box-tools -->
+                </div><!-- /.box-header -->
+                <div class="box-header with-border">
+                  <h3 class="box-title">Random Forest</h3>
+                  <div class="box-tools pull-right">
+                  </div><!-- /.box-tools -->
+                </div><!-- /.box-header -->
+                <div class="box-body">
+                <center>
+                <img src="http://cdn-ak.f.st-hatena.com/images/fotolife/k/kazoo04/20131204/20131204173330.png" alt="Smiley face"  width="70%"><BR>
+                </center>
+                  Classification and regression based on a forest of trees using random inputs, utilizing conditional inference trees as base learners.<BR>
+                      <div class="box-tools pull-left">
+                    <span data-toggle="tooltip"  class='badge bg-yellow'>python</span>
+                    <span data-toggle="tooltip"  class='badge bg-light'>Model</span>
+                    </div>
+
+                    <div class="box-tools pull-right">
+                    <span data-toggle="tooltip"  class='fa fa-eye'></span>125 
+                    <span data-toggle="tooltip"  class='fa fa-download'></span>29
+
+                    
+               
+
+                  </div><!-- /.box-tools -->
+                
+                </div><!-- /.box-body -->
+                <center><BR><a href="#" class="small-box-footer">
+                  More info <i class="fa fa-arrow-circle-right"></i>   </a></center>
+              
+              </div><!-- /.box -->
+            </div><!-- /.col -->
+            <div class="col-md-3">
+              <div class="box box-default">
+               <div class="box-header with-border">
+                  <div ><i class="fa fa-diamond"></i>&nbsp;SPSS Modeler</div>
+                  <div class="box-tools pull-right">
+                    
+                    <span data-toggle="tooltip"  class='badge bg-green'>Partner</span>
+
+                  </div><!-- /.box-tools -->
+                </div><!-- /.box-header -->
+                <div class="box-header with-border">
+                  <h3 class="box-title">Random Forest</h3>
+                  <div class="box-tools pull-right">
+                  </div><!-- /.box-tools -->
+                </div><!-- /.box-header -->
+                <div class="box-body">
+                <center>
+                <img src="Thumbnails/forest.png" alt="Smiley face"  width="70%"><BR>
+                </center>
+                  Classification and regression based on a forest of trees using random inputs, utilizing conditional inference trees as base learners.<BR>
+                      <div class="box-tools pull-left">
+                    <span data-toggle="tooltip"  class='badge bg-yellow'>python</span>
+                    <span data-toggle="tooltip"  class='badge bg-light'>Model</span>
+                    </div>
+
+<div class="box-tools pull-right">
+                    <span data-toggle="tooltip"  class='fa fa-eye'></span>125 
+                    <span data-toggle="tooltip"  class='fa fa-download'></span>29
+
+                    
+               
+
+                  </div><!-- /.box-tools -->
+
+                </div><!-- /.box-body -->
+                
+                <center><BR><a href="#" class="small-box-footer">
+                  More info <i class="fa fa-arrow-circle-right"></i>   </a></center>
+              
+              </div><!-- /.box -->
+            </div><!-- /.col -->
+          </div><!-- /.row -->
+
+
+          <!-- ============================================
+         
+
+          <!-- =========================================================== -->
+
+        
+
+        </section><!-- /.content -->
+      </div><!-- /.content-wrapper -->
+
+    </div><!-- ./wrapper -->
+
+    <!-- jQuery 2.1.3 -->
+    <script src="plugins/jQuery/jQuery-2.1.3.min.js"></script>
+    <!-- Bootstrap 3.3.2 JS -->
+    <script src="bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+    <!-- Slimscroll -->
+    <script src="plugins/slimScroll/jquery.slimscroll.min.js" type="text/javascript"></script>
+    <!-- FastClick -->
+    <script src='plugins/fastclick/fastclick.min.js'></script>
+    <!-- AdminLTE App -->
+    <script src="dist/js/app.min.js" type="text/javascript"></script>
+
+
+    <!-- AdminLTE for demo purposes -->
+  </body>
+</html>
